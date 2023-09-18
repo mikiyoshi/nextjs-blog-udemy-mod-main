@@ -33,3 +33,11 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 "# nextjs-microblog-udemy" 
+
+## Nextjs snippets
+- [Nextjs snippets](https://marketplace.visualstudio.com/items?itemName=PulkitGangwar.nextjs-snippets)
+  - sample snippets
+    - nafe (nextjs arrow function (export at the end))
+    - naf (nextjs arrow function)
+    - nfe (nextjs normal function (export at the end))
+    - nf (nextjs normal function )
