@@ -1,13 +1,13 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import Layout, { siteTitle } from '../components/layout';
+import utilStyles from '../styles/utils.module.css';
 
-import { getSortedPostsData } from "../lib/posts";
+import { getSortedPostsData } from '../lib/posts';
 
-import Link from "next/link";
-import Date from "../components/date";
+import Link from 'next/link';
+import Date from '../components/date';
 
 //SSGの場合
 export async function getStaticProps() {
@@ -35,6 +35,9 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
+        <Link href={`/posts/first-post`}>
+          <a>First Post</a>
+        </Link>
         <p>
           私はフルスタックエンジニアです/Udemy講師として活動しています/好きな言語はJavascriptです
         </p>
@@ -50,10 +53,12 @@ export default function Home({ allPostsData }) {
           {allPostsData.map(({ id, date, title, thumbnail }) => (
             <article key={id}>
               <Link href={`/posts/${id}`}>
-                <img
-                  src={`${thumbnail}`}
-                  className={`${styles.thumbnailImage}`}
-                />
+                <a>
+                  <img
+                    src={`${thumbnail}`}
+                    className={`${styles.thumbnailImage}`}
+                  />
+                </a>
               </Link>
               <Link href={`/posts/${id}`}>
                 <a className={utilStyles.boldText}>{title}</a>
